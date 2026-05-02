@@ -1,0 +1,393 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="FlowOP Services | System Design, Automation, Analytics"
+  description="Operations Alignment Sprint, Systems Buildout, and Ongoing Operational Support for growing product and distribution businesses."
+  pathname="/services"
+  bodyClass="services-page"
+>
+  <main>
+    <section class="services-hero section" aria-labelledby="services-hero-heading">
+      <div class="services-hero-bg" aria-hidden="true"></div>
+      <div class="container services-hero-inner">
+        <div class="services-hero-copy">
+          <span class="hero-eyebrow reveal">Services</span>
+          <h1 id="services-hero-heading" class="services-hero-title reveal">
+            Start with <em class="services-hero-accent">alignment.</em><br />
+            Then build.
+          </h1>
+          <p class="services-hero-lead reveal">
+            The first step is restoring clarity across reporting, planning, and execution. From there, support scales in a
+            way that genuinely fits your team — no retainer dependency, no oversized scope.
+          </p>
+          <div class="services-hero-actions reveal">
+            <a class="btn btn-primary" href="/contact">Book Discovery Call</a>
+            <a class="btn btn-ghost" href="#how-engagement-works"
+              >How Engagement Works <span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+        <ul class="services-hero-highlights reveal" aria-label="Engagement highlights">
+          <li class="services-hero-highlight">
+            <span class="services-hero-icon-tile" aria-hidden="true">
+              <span class="services-hero-icon services-hero-icon--moon"></span>
+            </span>
+            <span class="services-hero-highlight-text">
+              <strong>One dedicated day per week</strong>
+              <span>Fractional delivery — right-sized for growing teams without a full ops hire.</span>
+            </span>
+          </li>
+          <li class="services-hero-highlight">
+            <span class="services-hero-icon-tile" aria-hidden="true">
+              <span class="services-hero-icon services-hero-icon--arrow"></span>
+            </span>
+            <span class="services-hero-highlight-text">
+              <strong>Sprint windows for priority phases</strong>
+              <span>Additional time available when the work requires more focused effort.</span>
+            </span>
+          </li>
+          <li class="services-hero-highlight">
+            <span class="services-hero-icon-tile" aria-hidden="true">
+              <span class="services-hero-icon services-hero-icon--dash"></span>
+            </span>
+            <span class="services-hero-highlight-text">
+              <strong>Remote-first by default</strong>
+              <span>On-site or client visits planned in advance around key milestones — not billed by default.</span>
+            </span>
+          </li>
+          <li class="services-hero-highlight">
+            <span class="services-hero-icon-tile" aria-hidden="true">
+              <span class="services-hero-icon services-hero-icon--spark"></span>
+            </span>
+            <span class="services-hero-highlight-text">
+              <strong>Clear handover every time</strong>
+              <span>Every engagement ends with practical assets your team owns and runs independently.</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="services-offer section" aria-labelledby="services-offer-heading">
+      <div class="container">
+        <header class="services-offer-header reveal">
+          <div class="services-offer-header-left">
+            <p class="services-offer-kicker rule-kicker">Offer 01</p>
+            <h2 id="services-offer-heading" class="services-offer-title">Operations Alignment Sprint</h2>
+          </div>
+          <p class="services-offer-intro reveal">
+            Focused sprints that restore alignment between reporting, planning, and execution — with clear deliverables
+            and ownership at the end. Pick the first sprint that matches where friction is highest; we scope together on
+            a discovery call. The flagship Operations Alignment Sprint typically runs ~10 business days. The focused
+            sprints below let you start narrower when only one area needs work.
+          </p>
+        </header>
+
+        <div class="services-offer-board reveal">
+          <div class="services-offer-grid">
+            <article class="services-offer-cell">
+              <div class="services-offer-cell-head">
+                <h3 class="services-offer-cell-title">Workflow Clarity Sprint</h3>
+                <span class="services-offer-duration">5–7 days</span>
+              </div>
+              <p class="services-offer-cell-lead">
+                Map where work slows down, clarify handoffs, and set a cleaner operating rhythm teams can maintain.
+              </p>
+              <dl class="services-offer-meta">
+                <div>
+                  <dt>Deliverables</dt>
+                  <dd>Current-state map, friction points, and simplified handoff flow.</dd>
+                </div>
+                <div>
+                  <dt>Shift</dt>
+                  <dd>Fewer blockers between teams and a faster execution rhythm.</dd>
+                </div>
+                <div>
+                  <dt>Handoff</dt>
+                  <dd>Ownership map and practical playbook for weekly use.</dd>
+                </div>
+              </dl>
+            </article>
+            <article class="services-offer-cell">
+              <div class="services-offer-cell-head">
+                <h3 class="services-offer-cell-title">Reporting Alignment Sprint</h3>
+                <span class="services-offer-duration">1–2 weeks</span>
+              </div>
+              <p class="services-offer-cell-lead">
+                Restructure reporting into a reliable cadence so leadership and teams act on the same view of
+                performance.
+              </p>
+              <dl class="services-offer-meta">
+                <div>
+                  <dt>Deliverables</dt>
+                  <dd>Aligned reporting structure, metric definitions, and review cadence.</dd>
+                </div>
+                <div>
+                  <dt>Shift</dt>
+                  <dd>Quicker decisions with clearer performance visibility.</dd>
+                </div>
+                <div>
+                  <dt>Handoff</dt>
+                  <dd>Report ownership notes and operating checklist.</dd>
+                </div>
+              </dl>
+            </article>
+            <article class="services-offer-cell">
+              <div class="services-offer-cell-head">
+                <h3 class="services-offer-cell-title">Planning Stability Sprint</h3>
+                <span class="services-offer-duration">1–2 weeks</span>
+              </div>
+              <p class="services-offer-cell-lead">
+                Build practical planning logic for demand, capacity, or inventory to reduce reactive decision cycles.
+              </p>
+              <dl class="services-offer-meta">
+                <div>
+                  <dt>Deliverables</dt>
+                  <dd>Planning model with assumptions, constraints, and scenarios.</dd>
+                </div>
+                <div>
+                  <dt>Shift</dt>
+                  <dd>Fewer fire drills and stronger planning confidence.</dd>
+                </div>
+                <div>
+                  <dt>Handoff</dt>
+                  <dd>Editable model with usage guide for internal teams.</dd>
+                </div>
+              </dl>
+            </article>
+            <article class="services-offer-cell">
+              <div class="services-offer-cell-head">
+                <h3 class="services-offer-cell-title">Decision Dashboard Sprint</h3>
+                <span class="services-offer-duration">5–10 days</span>
+              </div>
+              <p class="services-offer-cell-lead">
+                Design a focused dashboard aligned to weekly operating decisions, with clear metric ownership and
+                cadence.
+              </p>
+              <dl class="services-offer-meta">
+                <div>
+                  <dt>Deliverables</dt>
+                  <dd>Decision-focused dashboard and metric ownership framework.</dd>
+                </div>
+                <div>
+                  <dt>Shift</dt>
+                  <dd>Less time compiling data, more time acting on priorities.</dd>
+                </div>
+                <div>
+                  <dt>Handoff</dt>
+                  <dd>Dashboard governance notes and review schedule.</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </div>
+
+        <div class="services-offer-foot reveal">
+          <span class="services-offer-foot-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3 11L11 3M11 3H5M11 3V9"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </span>
+          <p class="services-offer-foot-text">
+            <strong>Start with the area creating the most confusion, delay, or rework.</strong>
+            We sequence work so the first sprint earns clarity fast — then decide what to tackle next based on outcomes,
+            not assumptions. Ready to scope it together?
+            <a class="services-offer-foot-link" href="/contact">Book a discovery call</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="services-engagement section"
+      id="how-engagement-works"
+      tabindex="-1"
+      aria-labelledby="services-engagement-heading"
+    >
+      <div class="container services-engagement-inner">
+        <div class="services-engagement-copy reveal">
+          <p class="services-engagement-kicker">— How engagement works</p>
+          <h2 id="services-engagement-heading" class="services-engagement-title">
+            Practical delivery,<br />
+            <em class="services-engagement-accent">no retainer required.</em>
+          </h2>
+          <p class="services-engagement-intro">
+            Every engagement is structured to give your team clarity and ownership by the end — not ongoing dependency.
+            Here’s how work typically flows.
+          </p>
+        </div>
+        <ol class="services-engagement-steps reveal">
+          <li class="services-engagement-step">
+            <span class="services-engagement-num" aria-hidden="true">01</span>
+            <div class="services-engagement-step-body">
+              <h3 class="services-engagement-step-title">Discovery call</h3>
+              <p>
+                We scope the problem together — where reporting, planning, or execution is drifting — and agree on the
+                right first sprint.
+              </p>
+            </div>
+          </li>
+          <li class="services-engagement-step">
+            <span class="services-engagement-num" aria-hidden="true">02</span>
+            <div class="services-engagement-step-body">
+              <h3 class="services-engagement-step-title">Sprint scoping</h3>
+              <p>
+                Clear priorities, defined deliverables, and a realistic timeline are agreed before work begins. No scope
+                creep by design.
+              </p>
+            </div>
+          </li>
+          <li class="services-engagement-step">
+            <span class="services-engagement-num" aria-hidden="true">03</span>
+            <div class="services-engagement-step-body">
+              <h3 class="services-engagement-step-title">Focused delivery</h3>
+              <p>
+                One dedicated day per week, with optional additional sprint time. Most work is remote; on-site visits
+                planned in advance.
+              </p>
+            </div>
+          </li>
+          <li class="services-engagement-step">
+            <span class="services-engagement-num" aria-hidden="true">04</span>
+            <div class="services-engagement-step-body">
+              <h3 class="services-engagement-step-title">Clean handover</h3>
+              <p>
+                Every sprint ends with practical assets — maps, models, playbooks — and clear ownership. Your team runs
+                it from here.
+              </p>
+            </div>
+          </li>
+          <li class="services-engagement-step">
+            <span class="services-engagement-num" aria-hidden="true">05</span>
+            <div class="services-engagement-step-body">
+              <h3 class="services-engagement-step-title">Optional next step</h3>
+              <p>
+                If deeper or ongoing support makes sense, we agree a new scope. Nothing assumed — everything decided
+                together.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="services-extend section" aria-labelledby="services-extend-heading">
+      <div class="container">
+        <header class="services-extend-header reveal">
+          <h2 id="services-extend-heading" class="services-extend-title">
+            Extend support when deeper systems work is needed.
+          </h2>
+          <p class="services-extend-sub">
+            Once alignment is restored, some teams need broader redesign or ongoing guidance. Both are available — scoped
+            clearly, delivered the same way.
+          </p>
+        </header>
+
+        <div class="services-extend-stack">
+          <article class="services-extend-card reveal">
+            <span class="services-extend-watermark" aria-hidden="true">01</span>
+            <span class="services-extend-badge">Extended support</span>
+            <h3 class="services-extend-card-title">Systems Buildout</h3>
+            <p class="services-extend-card-lead">
+              For teams that need broader redesign across processes, data flow, and operational structure — without a
+              permanent ops hire.
+            </p>
+            <div class="services-extend-details">
+              <div class="services-extend-details-col">
+                <div class="services-extend-detail">
+                  <h4 class="services-extend-detail-label">Ideal for</h4>
+                  <p>Businesses outgrowing legacy routines and manual workarounds.</p>
+                </div>
+                <div class="services-extend-detail">
+                  <h4 class="services-extend-detail-label">Outcome</h4>
+                  <p>Coordinated systems with clearer accountability across reporting and execution.</p>
+                </div>
+              </div>
+              <div class="services-extend-details-col">
+                <div class="services-extend-detail">
+                  <h4 class="services-extend-detail-label">Typical work</h4>
+                  <p>Reporting redesign, planning architecture, workflow cleanup, and automation.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="services-extend-card reveal">
+            <span class="services-extend-watermark" aria-hidden="true">02</span>
+            <span class="services-extend-badge">Ongoing partnership</span>
+            <h3 class="services-extend-card-title">Ongoing Operational Support</h3>
+            <p class="services-extend-card-lead">
+              For teams that benefit from consistent operational guidance across growth cycles — still scoped, still
+              handover-oriented.
+            </p>
+            <div class="services-extend-details">
+              <div class="services-extend-details-col">
+                <div class="services-extend-detail">
+                  <h4 class="services-extend-detail-label">Ideal for</h4>
+                  <p>Teams with recurring execution friction across multiple functions.</p>
+                </div>
+                <div class="services-extend-detail">
+                  <h4 class="services-extend-detail-label">Outcome</h4>
+                  <p>Steadier performance and fewer operational surprises as you scale.</p>
+                </div>
+              </div>
+              <div class="services-extend-details-col">
+                <div class="services-extend-detail">
+                  <h4 class="services-extend-detail-label">Working rhythm</h4>
+                  <p>One focused day per week, with agreed sprint-time expansion when needed.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-audience section" aria-labelledby="services-audience-heading">
+      <div class="container">
+        <div class="services-audience-panel reveal">
+          <header class="services-audience-header">
+            <span class="services-audience-watermark" aria-hidden="true">03</span>
+            <div class="services-audience-header-copy">
+              <h2 id="services-audience-heading" class="services-audience-title">Who this works best for</h2>
+              <p class="services-audience-intro">
+                Growing product and distribution businesses where complexity is rising faster than system readiness — and
+                leadership needs one reliable operational view to act from.
+              </p>
+            </div>
+          </header>
+          <ul class="services-audience-grid">
+            <li class="services-audience-card">
+              <p class="services-audience-label">Leadership</p>
+              <p>Teams not working from one consistent operating view.</p>
+            </li>
+            <li class="services-audience-card">
+              <p class="services-audience-label">Operations</p>
+              <p>Planning and execution drift apart under pressure.</p>
+            </li>
+            <li class="services-audience-card">
+              <p class="services-audience-label">Delivery</p>
+              <p>Handoff quality and workflow ownership are inconsistent.</p>
+            </li>
+            <li class="services-audience-card">
+              <p class="services-audience-label">Systems</p>
+              <p>Data and tooling no longer match current business reality.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="services-closing reveal">
+          <p class="services-closing-text">Book a discovery call and we’ll scope the right first sprint together.</p>
+          <a class="btn btn-primary" href="/contact">Book Discovery Call</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

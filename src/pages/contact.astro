@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+/** Set in `.env` as PUBLIC_FORMSPREE_ID=xxxx or edit the fallback below. https://formspree.io/ */
+const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORMSPREE_ENDPOINT';
+---
+
+<BaseLayout
+  title="Contact FlowOP | Start a Conversation"
+  description="Book a discovery call to scope your Operations Alignment Sprint and define the right first systems priority."
+  pathname="/contact"
+  bodyClass="contact-page"
+>
+  <main>
+    <section class="contact-bestfit" aria-labelledby="contact-bestfit-heading">
+      <div class="container">
+        <div class="contact-bestfit-grid">
+          <div class="contact-bestfit-copy">
+            <p class="contact-bestfit-kicker reveal">Best fit right now</p>
+            <h2 id="contact-bestfit-heading" class="contact-bestfit-title reveal">
+              Growing teams where complexity is rising
+              <em class="contact-bestfit-title-accent">faster than systems.</em>
+            </h2>
+
+            <ul class="contact-bestfit-steps reveal">
+              <li class="contact-bestfit-step">
+                <span class="contact-bestfit-num" aria-hidden="true">→</span>
+                <div class="contact-bestfit-step-body">
+                  <h3>Common Starting Points</h3>
+                  <p>Decision delays, planning instability, workflow friction, and unclear system ownership.</p>
+                </div>
+              </li>
+              <li class="contact-bestfit-step">
+                <span class="contact-bestfit-num" aria-hidden="true">+</span>
+                <div class="contact-bestfit-step-body">
+                  <h3>What You Leave With</h3>
+                  <p>A clear first-priority scope, sprint outcomes, and a practical implementation path.</p>
+                </div>
+              </li>
+              <li class="contact-bestfit-step">
+                <span class="contact-bestfit-num" aria-hidden="true">◐</span>
+                <div class="contact-bestfit-step-body">
+                  <h3>Working Model</h3>
+                  <p>Fractional weekly support with optional sprint expansion and pre-planned on-site time.</p>
+                </div>
+              </li>
+              <li class="contact-bestfit-step">
+                <span class="contact-bestfit-num" aria-hidden="true">↗</span>
+                <div class="contact-bestfit-step-body">
+                  <h3>Low-Risk First Step</h3>
+                  <p>Start with a short brief. You receive a practical recommendation even before any engagement begins.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-expect-panel reveal">
+              <p class="contact-expect-title">What to expect on the call</p>
+              <ul class="contact-expect-list">
+                <li>A focused conversation about where operations is creating the most drag</li>
+                <li>Agreement on the right first sprint priority and what good looks like</li>
+                <li>A clear sense of scope, timeline, and what you’d walk away with</li>
+                <li>No pressure — if it’s not the right fit, I’ll say so</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="contact-form-card reveal" id="discovery-form">
+            <h2 class="contact-form-title">Request a discovery call</h2>
+            <form data-contact-form action={`https://formspree.io/f/${formspreeId}`} method="POST">
+              <div class="contact-form-row">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" placeholder="Your name" required autocomplete="name" />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="your@email.com" required autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="company">Company <span class="field-optional">(optional)</span></label>
+                <input id="company" name="company" placeholder="Company name" autocomplete="organization" />
+              </div>
+
+              <div class="field">
+                <label for="message">What’s the main operational challenge right now?</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="e.g. reporting feels disconnected, planning is reactive, handoffs keep breaking down…"
+                  required></textarea>
+              </div>
+
+              <div class="field">
+                <label for="team-size">Team or company size <span class="field-optional">(optional)</span></label>
+                <select id="team-size" name="team-size">
+                  <option value="">Select an option</option>
+                  <option value="1-10">1–10</option>
+                  <option value="11-50">11–50</option>
+                  <option value="51-200">51–200</option>
+                  <option value="200+">200+</option>
+                </select>
+              </div>
+
+              <button class="btn-submit" type="submit">Request Discovery Call <span aria-hidden="true">→</span></button>
+              <p class="form-note">
+                Replace <code>YOUR_FORMSPREE_ENDPOINT</code> with your live Formspree form ID before launch.
+              </p>
+              <p class="form-status" data-form-status aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
