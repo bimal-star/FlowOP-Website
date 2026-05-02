@@ -3489,6 +3489,41 @@ textarea {
   text-align: center;
 }
 
+.contact-form-card .btn-submit.is-loading,
+.contact-form-card .btn-submit:disabled {
+  opacity: 0.82;
+  cursor: wait;
+  transform: none;
+  box-shadow: none;
+}
+
+.contact-form-card .btn-submit:disabled:hover {
+  transform: none;
+  background: var(--navy);
+}
+
+.contact-form-thanks {
+  text-align: center;
+  padding: clamp(1.25rem, 3vw, 2rem) 0.5rem;
+}
+
+.contact-form-thanks-lead {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.45rem);
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+
+.contact-form-thanks-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 22rem;
+  margin-inline: auto;
+}
+
 /* ——— About / Contact responsive ——— */
 @media (max-width: 900px) {
   .about-why-grid,

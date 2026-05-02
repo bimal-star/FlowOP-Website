@@ -65,47 +65,59 @@ const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'xnjwnyrd';
           </div>
 
           <aside class="contact-form-card reveal" id="discovery-form">
-            <h2 class="contact-form-title">Request a discovery call</h2>
-            <form data-contact-form action={`https://formspree.io/f/${formspreeId}`} method="POST">
-              <div class="contact-form-row">
-                <div class="field">
-                  <label for="name">Name</label>
-                  <input id="name" name="name" placeholder="Your name" required autocomplete="name" />
-                </div>
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" placeholder="your@email.com" required autocomplete="email" />
-                </div>
-              </div>
+            <h2 class="contact-form-title" data-contact-form-title>Request a discovery call</h2>
+            <div data-contact-form-root>
+              <div data-contact-form-stage>
+                <form data-contact-form action={`https://formspree.io/f/${formspreeId}`} method="POST">
+                  <div class="contact-form-row">
+                    <div class="field">
+                      <label for="name">Name</label>
+                      <input id="name" name="name" placeholder="Your name" required autocomplete="name" />
+                    </div>
+                    <div class="field">
+                      <label for="email">Email</label>
+                      <input id="email" name="email" type="email" placeholder="your@email.com" required autocomplete="email" />
+                    </div>
+                  </div>
 
-              <div class="field">
-                <label for="company">Company <span class="field-optional">(optional)</span></label>
-                <input id="company" name="company" placeholder="Company name" autocomplete="organization" />
-              </div>
+                  <div class="field">
+                    <label for="company">Company <span class="field-optional">(optional)</span></label>
+                    <input id="company" name="company" placeholder="Company name" autocomplete="organization" />
+                  </div>
 
-              <div class="field">
-                <label for="message">What’s the main operational challenge right now?</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="e.g. reporting feels disconnected, planning is reactive, handoffs keep breaking down…"
-                  required></textarea>
-              </div>
+                  <div class="field">
+                    <label for="message">What’s the main operational challenge right now?</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="e.g. reporting feels disconnected, planning is reactive, handoffs keep breaking down…"
+                      required></textarea>
+                  </div>
 
-              <div class="field">
-                <label for="team-size">Team or company size <span class="field-optional">(optional)</span></label>
-                <select id="team-size" name="team-size">
-                  <option value="">Select an option</option>
-                  <option value="1-10">1–10</option>
-                  <option value="11-50">11–50</option>
-                  <option value="51-200">51–200</option>
-                  <option value="200+">200+</option>
-                </select>
-              </div>
+                  <div class="field">
+                    <label for="team-size">Team or company size <span class="field-optional">(optional)</span></label>
+                    <select id="team-size" name="team-size">
+                      <option value="">Select an option</option>
+                      <option value="1-10">1–10</option>
+                      <option value="11-50">11–50</option>
+                      <option value="51-200">51–200</option>
+                      <option value="200+">200+</option>
+                    </select>
+                  </div>
 
-              <button class="btn-submit" type="submit">Request Discovery Call <span aria-hidden="true">→</span></button>
-              <p class="form-status" data-form-status aria-live="polite"></p>
-            </form>
+                  <button class="btn-submit" type="submit" data-contact-submit>
+                    <span class="btn-submit-label">Request Discovery Call <span aria-hidden="true">→</span></span>
+                  </button>
+                  <p class="form-status" data-form-status aria-live="polite"></p>
+                </form>
+              </div>
+              <div class="contact-form-thanks" data-contact-thanks hidden tabindex="-1" aria-live="polite">
+                <p class="contact-form-thanks-lead">Thank you</p>
+                <p class="contact-form-thanks-text">
+                  Your message was sent successfully. We’ll follow up soon.
+                </p>
+              </div>
+            </div>
           </aside>
         </div>
       </div>
