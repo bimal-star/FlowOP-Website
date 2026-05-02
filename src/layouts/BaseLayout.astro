@@ -1,4 +1,6 @@
 ---
+import Analytics from '@vercel/analytics/astro';
+
 interface Props {
   title: string;
   description: string;
@@ -14,29 +16,8 @@ const { title, description, pathname, bodyClass } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Consent Mode defaults (must run before gtag config / gtag.js) -->
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('consent', 'default', {
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        analytics_storage: 'denied',
-        functionality_storage: 'denied',
-        personalization_storage: 'denied',
-        security_storage: 'granted',
-      });
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-TGZS0VJQJR"></script>
-    <script is:inline>
-      gtag('js', new Date());
-      gtag('config', 'G-TGZS0VJQJR');
-    </script>
     <meta charset="UTF-8" />
+    <Analytics />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -78,32 +59,6 @@ const { title, description, pathname, bodyClass } = Astro.props;
         <p class="footer-copy">© <span data-year></span> FlowOP Solutions. All rights reserved.</p>
       </div>
     </footer>
-
-    <div
-      id="cookie-consent"
-      class="cookie-consent"
-      role="dialog"
-      aria-labelledby="cookie-consent-title"
-      aria-describedby="cookie-consent-desc"
-      aria-modal="false"
-      hidden
-    >
-      <div class="cookie-consent-inner">
-        <p id="cookie-consent-title" class="cookie-consent-heading">Analytics cookies</p>
-        <p id="cookie-consent-desc" class="cookie-consent-text">
-          We use Google Analytics to understand how the site is used. Analytics only runs if you accept. You can change
-          your mind anytime by clearing site data for this domain.
-        </p>
-        <div class="cookie-consent-actions">
-          <button type="button" class="cookie-consent-btn cookie-consent-btn--primary" data-consent-accept>
-            Accept analytics
-          </button>
-          <button type="button" class="cookie-consent-btn cookie-consent-btn--ghost" data-consent-reject>
-            Reject non-essential
-          </button>
-        </div>
-      </div>
-    </div>
 
     <script is:inline src="/js/main.js"></script>
   </body>

@@ -1,55 +1,4 @@
 (function () {
-  const CONSENT_KEY = 'flowop_analytics_consent';
-
-  function applyStoredConsent() {
-    var stored = null;
-    try {
-      stored = localStorage.getItem(CONSENT_KEY);
-    } catch (e) {
-      stored = null;
-    }
-    if (stored === 'granted' && typeof window.gtag === 'function') {
-      window.gtag('consent', 'update', {
-        analytics_storage: 'granted',
-      });
-    }
-    return stored;
-  }
-
-  var banner = document.getElementById('cookie-consent');
-  if (banner) {
-    var storedConsent = applyStoredConsent();
-    if (storedConsent !== 'granted' && storedConsent !== 'denied') {
-      banner.removeAttribute('hidden');
-    }
-    var acceptBtn = banner.querySelector('[data-consent-accept]');
-    var rejectBtn = banner.querySelector('[data-consent-reject]');
-    function hideBanner() {
-      banner.setAttribute('hidden', '');
-    }
-    if (acceptBtn) {
-      acceptBtn.addEventListener('click', function () {
-        try {
-          localStorage.setItem(CONSENT_KEY, 'granted');
-        } catch (e) {}
-        if (typeof window.gtag === 'function') {
-          window.gtag('consent', 'update', {
-            analytics_storage: 'granted',
-          });
-        }
-        hideBanner();
-      });
-    }
-    if (rejectBtn) {
-      rejectBtn.addEventListener('click', function () {
-        try {
-          localStorage.setItem(CONSENT_KEY, 'denied');
-        } catch (e) {}
-        hideBanner();
-      });
-    }
-  }
-
   const navToggle = document.querySelector('[data-nav-toggle]');
   const navLinks = document.querySelector('[data-nav-links]');
 
@@ -113,22 +62,4 @@
       }
     });
   }
-
-  const ctaCandidates = document.querySelectorAll('a, button');
-  ctaCandidates.forEach(function (el) {
-    const label = (el.textContent || '').trim().toLowerCase();
-    if (label.indexOf('book discovery call') === -1) return;
-    el.addEventListener('click', function () {
-      var allow = false;
-      try {
-        allow = localStorage.getItem(CONSENT_KEY) === 'granted';
-      } catch (e) {}
-      if (allow && typeof window.gtag === 'function') {
-        window.gtag('event', 'book_discovery_call', {
-          link_url: el.getAttribute('href') || '',
-          page_path: location.pathname,
-        });
-      }
-    });
-  });
 })();
