@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-/** Set in `.env` as PUBLIC_FORMSPREE_ID=xxxx or edit the fallback below. https://formspree.io/ */
-const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORMSPREE_ENDPOINT';
+/** Override with `PUBLIC_FORMSPREE_ID` in `.env` if needed. https://formspree.io/ */
+const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'xnjwnyrd';
 ---
 
 <BaseLayout
@@ -104,9 +104,6 @@ const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORMSPREE_ENDPO
               </div>
 
               <button class="btn-submit" type="submit">Request Discovery Call <span aria-hidden="true">→</span></button>
-              <p class="form-note">
-                Replace <code>YOUR_FORMSPREE_ENDPOINT</code> with your live Formspree form ID before launch.
-              </p>
               <p class="form-status" data-form-status aria-live="polite"></p>
             </form>
           </aside>

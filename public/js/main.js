@@ -103,9 +103,9 @@
   if (form && status) {
     form.addEventListener('submit', function (event) {
       const endpoint = form.getAttribute('action') || '';
-      if (endpoint.indexOf('YOUR_FORMSPREE_ENDPOINT') !== -1) {
+      if (!/\/formspree\.io\/f\/[a-z0-9]+/i.test(endpoint)) {
         event.preventDefault();
-        status.textContent = 'Update the form action with your Formspree endpoint before sending.';
+        status.textContent = 'Contact form is not configured. Set PUBLIC_FORMSPREE_ID or the Formspree fallback in the site.';
         status.style.color = '#ffcf70';
       } else {
         status.textContent = 'Sending...';
