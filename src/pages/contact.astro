@@ -65,7 +65,12 @@ const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'xnjwnyrd';
           </div>
 
           <aside class="contact-form-card reveal" id="discovery-form">
-            <h2 class="contact-form-title" data-contact-form-title>Request a discovery call</h2>
+            <h2 class="contact-form-title" data-contact-form-title>Send a message</h2>
+            <a
+              class="btn btn-primary contact-calendly-cta"
+              href="https://calendly.com/flowopsolutions-calendar"
+              target="_blank"
+              rel="noopener noreferrer">Book Discovery Call</a>
             <div data-contact-form-root>
               <div data-contact-form-stage>
                 <form data-contact-form action={`https://formspree.io/f/${formspreeId}`} method="POST">
@@ -106,7 +111,7 @@ const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'xnjwnyrd';
                   </div>
 
                   <button class="btn-submit" type="submit" data-contact-submit>
-                    <span class="btn-submit-label">Request Discovery Call <span aria-hidden="true">→</span></span>
+                    <span class="btn-submit-label">Send a Message <span aria-hidden="true">→</span></span>
                   </button>
                   <p class="form-status" data-form-status aria-live="polite"></p>
                 </form>

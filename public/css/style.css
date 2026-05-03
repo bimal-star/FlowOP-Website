@@ -3356,6 +3356,13 @@ textarea {
   letter-spacing: -0.01em;
 }
 
+.contact-form-card .contact-calendly-cta {
+  margin: 0 0 clamp(1rem, 2vw, 1.35rem);
+  width: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 .contact-form-card form {
   display: flex;
   flex-direction: column;
