@@ -11,6 +11,20 @@ interface Props {
 }
 
 const { title, description, pathname, bodyClass } = Astro.props;
+
+const tickerSegments: { kind: 'phrase' | 'tool'; text: string }[] = [
+  { kind: 'phrase', text: 'AI-augmented delivery' },
+  { kind: 'phrase', text: 'Vibe coding' },
+  { kind: 'phrase', text: 'Modern tools, practical outcomes' },
+  { kind: 'phrase', text: 'Beyond the spreadsheet' },
+  { kind: 'tool', text: 'Claude' },
+  { kind: 'tool', text: 'ChatGPT' },
+  { kind: 'tool', text: 'Copilot' },
+  { kind: 'tool', text: 'Lovable' },
+  { kind: 'tool', text: 'Cursor' },
+  { kind: 'tool', text: 'Replit' },
+  { kind: 'phrase', text: 'Operations meets AI' },
+];
 ---
 
 <!doctype html>
@@ -51,6 +65,33 @@ const { title, description, pathname, bodyClass } = Astro.props;
     </header>
 
     <slot />
+
+    <div class="site-ticker" aria-label="Tools and delivery themes">
+      <div class="site-ticker-viewport">
+        <div class="site-ticker-track">
+          <span class="site-ticker-content">
+            {
+              tickerSegments.map((seg, i) => (
+                <>
+                  {i > 0 ? <span class="ticker-sep" aria-hidden="true">✦</span> : null}
+                  <span class={seg.kind === 'tool' ? 'ticker-tool' : 'ticker-phrase'}>{seg.text}</span>
+                </>
+              ))
+            }
+          </span>
+          <span class="site-ticker-content" aria-hidden="true">
+            {
+              tickerSegments.map((seg, i) => (
+                <>
+                  {i > 0 ? <span class="ticker-sep" aria-hidden="true">✦</span> : null}
+                  <span class={seg.kind === 'tool' ? 'ticker-tool' : 'ticker-phrase'}>{seg.text}</span>
+                </>
+              ))
+            }
+          </span>
+        </div>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="container footer-inner">

@@ -1,6 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+const beyondToolTags = [
+  'Claude',
+  'ChatGPT',
+  'Copilot',
+  'Lovable',
+  'Replit',
+  'Cursor',
+  'MS Office',
+  'VBA',
+  'Excel',
+];
+
 const cases = [
   {
     title: 'Forecasting Model Design and Implementation',
@@ -30,7 +42,7 @@ const cases = [
   {
     title: 'ERP and Planning Systems Implementation',
     sector: 'Large FMCG Manufacturer',
-    body: 'Over a five year period I led the implementation of multiple planning and manufacturing systems including MRP, Preactor APS scheduling software and Protean ERP. I also built Bills of Materials, automated the pallet building process in MS Access and designed works order forms to generate material requirements automatically. These systems became the operational backbone of the site.',
+    body: 'Over a five year period I was a key team member in the implementation of multiple planning and manufacturing systems including MRP, Preactor APS scheduling software and Protean ERP. I also built Bills of Materials, automated the pallet building process in MS Access and designed works order forms to generate material requirements automatically. These systems became the operational backbone of the site.',
   },
   {
     title: 'Barcoding System Design and Management',
@@ -71,6 +83,26 @@ const cases = [
               </article>
             ))
           }
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-beyond section" aria-labelledby="experience-beyond-heading">
+      <div class="container">
+        <div class="experience-beyond-grid">
+          <div class="experience-beyond-copy reveal">
+            <h2 id="experience-beyond-heading" class="beyond-consulting-title">Beyond Traditional Consulting</h2>
+            <p class="beyond-consulting-lead">
+              The way operational problems get solved is changing. Alongside traditional consulting, I actively explore
+              modern AI tools to reduce manual effort, automate repetitive tasks and surface insights faster without
+              enterprise software costs.
+            </p>
+          </div>
+          <div class="experience-beyond-tags reveal">
+            <div class="beyond-tool-list">
+              {beyondToolTags.map((label) => <span class="beyond-tool-tag">{label}</span>)}
+            </div>
+          </div>
         </div>
       </div>
     </section>
