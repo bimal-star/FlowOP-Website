@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const cases = [
+  {
+    title: 'Forecasting Model Design and Implementation',
+    sector: 'Large FMCG Manufacturer',
+    body: 'The business had no structured way to model forecast, capacity, and promotional activity together. I designed and built a forecasting, capacity and promotional analysis model in Excel from scratch. The result was a 50% reduction in finished goods disposals and significantly improved production planning accuracy.',
+  },
+  {
+    title: 'Production Efficiency Improvement',
+    sector: 'Large FMCG Manufacturer',
+    body: 'Production efficiency had plateaued and the business lacked visibility of where the gaps were. I implemented planning systems and best practices, introduced shift reporting and established daily and weekly review cadences across the production floor. The outcome was a 20% uplift in production efficiency.',
+  },
+  {
+    title: 'Pandemic Supply Chain Management',
+    sector: 'Multi-Site Food Production Business',
+    body: 'During the 2020 global supply crisis, I was appointed key contact for a major retail customer representing 40% of the business\'s total sales revenue. I ran weekly review calls covering stock holding, supply constraints and contingency planning. Service levels were maintained throughout the pandemic despite industry-wide disruption.',
+  },
+  {
+    title: 'Operational Performance Reporting',
+    sector: 'Multi-Site Food Production Business',
+    body: 'Leadership had no single view of daily operational performance across two manufacturing sites. I created a Daily Performance Review report and chaired weekly meetings with seven unit managers, covering performance, challenges and actions. The process eliminated recurring issues and generated measurable efficiencies across all departments.',
+  },
+  {
+    title: 'Logistics Cost Analysis',
+    sector: 'Multi-Site Food Production Business',
+    body: 'Distribution costs were not being scrutinised at route level. I built a logistics report that highlighted inefficient routes and calculated cost per drop across the network. The findings directly informed revised commercial terms with both new and existing customers, reducing distribution cost.',
+  },
+  {
+    title: 'ERP and Planning Systems Implementation',
+    sector: 'Large FMCG Manufacturer',
+    body: 'Over a five year period I led the implementation of multiple planning and manufacturing systems including MRP, Preactor APS scheduling software and Protean ERP. I also built Bills of Materials, automated the pallet building process in MS Access and designed works order forms to generate material requirements automatically. These systems became the operational backbone of the site.',
+  },
+  {
+    title: 'Barcoding System Design and Management',
+    sector: 'Large FMCG Manufacturer',
+    body: 'The site had no structured barcoding system. I designed and implemented a barcoding solution, built and maintained the database, and served as the sole site contact for 15 years. I also reduced manual label writing labour by extracting batch codes and descriptions directly from the MRP system and printing automatically to TEC printers.',
+  },
+];
+---
+
+<BaseLayout
+  title="Experience | FlowOP"
+  description="Anonymised examples of operational challenges across 25+ years in FMCG and supply chain."
+  pathname="/experience"
+  bodyClass="experience-page"
+>
+  <main>
+    <section class="experience-hero section" aria-labelledby="experience-hero-heading">
+      <div class="experience-hero-bg" aria-hidden="true"></div>
+      <div class="container experience-hero-inner">
+        <span class="hero-eyebrow reveal">Experience</span>
+        <h1 id="experience-hero-heading" class="experience-hero-title reveal">Experience</h1>
+        <p class="experience-hero-lead reveal">
+          A selection of operational challenges I have worked on across 25+ years in FMCG and supply chain. All examples
+          are anonymised.
+        </p>
+      </div>
+    </section>
+
+    <section class="experience-cases section" aria-label="Anonymised case studies">
+      <div class="container">
+        <div class="experience-cases-grid">
+          {
+            cases.map((item) => (
+              <article class="experience-case reveal">
+                <h3 class="experience-case-title">{item.title}</h3>
+                <p class="experience-case-sector">{item.sector}</p>
+                <p class="experience-case-body">{item.body}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" aria-labelledby="experience-cta-heading">
+      <div class="container cta-banner-inner">
+        <h2 id="experience-cta-heading" class="cta-banner-title reveal">
+          Discuss your operational <em class="cta-banner-accent">challenge</em>
+        </h2>
+        <div class="cta-banner-actions reveal">
+          <a
+            class="btn btn-primary"
+            href="https://calendly.com/flowopsolutions-calendar"
+            target="_blank"
+            rel="noopener noreferrer">Book Discovery Call</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

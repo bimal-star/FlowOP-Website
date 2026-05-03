@@ -43,6 +43,7 @@ const { title, description, pathname, bodyClass } = Astro.props;
         <nav class="nav-links" data-nav-links>
           <a class:list={[{ active: pathname === '/' }]} href="/">Home</a>
           <a class:list={[{ active: pathname === '/services' }]} href="/services">Services</a>
+          <a class:list={[{ active: pathname === '/experience' }]} href="/experience">Experience</a>
           <a class:list={[{ active: pathname === '/about' }]} href="/about">About</a>
           <a class:list={[{ active: pathname === '/contact' }]} href="/contact">Contact</a>
         </nav>

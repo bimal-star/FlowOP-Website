@@ -43,6 +43,9 @@
   --type-section-h2-lh: 1.2;
   --type-kicker-fs: 0.78rem;
   --type-kicker-ls: 0.1em;
+
+  /* Sticky nav (~78px) + border; used for #fragment scroll position */
+  --header-scroll-offset: 5.75rem;
 }
 
 *,
@@ -58,6 +61,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-scroll-offset);
 }
 
 body {
@@ -2655,6 +2659,117 @@ textarea {
   .services-page .services-audience-header {
     grid-template-columns: 1fr;
   }
+}
+
+/* ——— Experience page ——— */
+.experience-page main {
+  background: var(--bg);
+}
+
+.experience-page .experience-hero {
+  position: relative;
+  padding: clamp(3.25rem, 7vw, 5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+  overflow: hidden;
+}
+
+.experience-page .experience-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: radial-gradient(circle, rgba(13, 33, 55, 0.11) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.experience-page .experience-hero::after {
+  content: '';
+  position: absolute;
+  width: min(52vw, 480px);
+  height: min(52vw, 480px);
+  right: -12vw;
+  top: -18vw;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(58, 125, 68, 0.14), transparent 58%);
+  pointer-events: none;
+}
+
+.experience-page .experience-hero-inner {
+  position: relative;
+  max-width: 62ch;
+}
+
+.experience-page .experience-hero-inner .hero-eyebrow {
+  margin-bottom: 0;
+}
+
+.experience-page .experience-hero-title {
+  margin: clamp(1rem, 2vw, 1.35rem) 0 0;
+  font-family: var(--font-display);
+  font-size: var(--type-page-h1-fs);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: var(--type-page-h1-lh);
+  color: var(--navy);
+}
+
+.experience-page .experience-hero-lead {
+  margin: clamp(1rem, 2vw, 1.35rem) 0 0;
+  font-size: var(--type-lead-fs);
+  line-height: var(--type-lead-lh);
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.experience-page .experience-cases {
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+
+.experience-page .experience-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.2vw, 1.5rem);
+}
+
+.experience-page .experience-case {
+  background: var(--beige-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.1rem, 2.2vw, 1.45rem);
+}
+
+.experience-page .experience-case-title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(1.02rem, 1.9vw, 1.12rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.35;
+}
+
+.experience-page .experience-case-sector {
+  margin: clamp(0.35rem, 0.8vw, 0.5rem) 0 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--green);
+  font-weight: 500;
+}
+
+.experience-page .experience-case-body {
+  margin: clamp(0.65rem, 1.2vw, 0.85rem) 0 0;
+  font-size: var(--type-intro-fs);
+  line-height: var(--type-intro-lh);
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .experience-page .experience-cases-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.experience-page .cta-banner .cta-banner-actions {
+  margin-top: clamp(0.35rem, 1vw, 0.65rem);
 }
 
 /* ——— About page ——— */
